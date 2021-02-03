@@ -1,29 +1,30 @@
-#Skeleton Webserver, PHP and MySql environment
+# Skeleton Webserver, PHP and MySql environment
 ## Instructions 
 
 Having docker and docker-compose installed on your computer, once cloned 
 the repository will have to run the following:
 
-Shell script
+```Shell script
 docker-compose up -d
 ```
 
 Once the 3 containers have been lifted, we launched a terminal against 
 PHP container:
 
-Shell script
+```Shell script
 docker-compose exec php bash
 ```
 
 And we install the project dependencies:
 
-Shell script
+```Shell script
 composer install
 ```
 
 Once this is done, in the URL you'll http://localhost:8000 ll have our symfony app
 newly installed.
 
+</br>
 
 # Esqueleto entorno Webserver, PHP y MySql
 ## Instrucciones 
