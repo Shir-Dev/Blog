@@ -1,0 +1,22 @@
+
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/styles.css">
+
+{% endblock %}
+{% block body %}
+    <h1>Listado de peliculas</h1>
+    <table>
+        <tr>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+        </tr>
+        {% for pelicula in peliculas %}
+            <tr {% if loop.index0 % 2 == 0 %} class="cebra"{% endif %}>
+                <td>{{ pelicula.titulo }}</td>
+                <td>{{ pelicula.descripcion }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

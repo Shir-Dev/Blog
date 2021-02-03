@@ -1,0 +1,83 @@
+/*
+******************************
+******* GENERAL CONFIG *******
+******************************
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    width: 100%;
+    background-color: #5831a0;
+    color: white;
+    padding: 45px 0px;
+}
+
+/*
+******************************
+*********** HEADER ***********
+******************************
+*/
+
+header{
+    margin: 10px;
+    padding: 10px;
+}
+
+.header-img img{
+    border-radius: 50%;
+}
+
+
+/*
+******************************
+************ INFO ************
+******************************
+*/
+.tech-skills, .hobbies{
+    background-color: whitesmoke;
+    color: black;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+/*
+******************************
+********** CONTACT ***********
+******************************
+*/
+.contact-form-container, .form-container{
+    margin-top: 30px;
+    padding: 30px 10px;
+    border-radius: 20px;
+    background-color: #c9abec;
+}
+
+#contact-form label, #serie-form label{
+    margin-top: 10px;
+}
+
+
+/*
+******************************
+********* PORTFOLIO **********
+******************************
+*/
+
+.btn-container, .git-link{
+    margin: 35px 0px 5px 0px;
+}
+
+/*
+******************************
+*********** OTHER ************
+******************************
+*/
+
+tr.cebra {
+    background-color: gray;
+}

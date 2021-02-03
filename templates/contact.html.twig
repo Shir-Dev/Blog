@@ -1,0 +1,64 @@
+
+{% extends 'homepage.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+    
+        <section class="title row align-items-center">
+            
+            <div class="col">
+            </div>
+        
+            <div class="header-img col-12 text-center">
+                <img src="{{ asset('img/shirley.jpg') }}" height="180" alt="">
+            </div>
+            <div class="header-text col-12 text-center">
+                <h1>Contact Info</h1>
+                
+                <div class="contact-info text-center">
+                    <p>Phone: (+34) 643959109</p>
+                    <p>Email: AriasV.Shirley@gmail.com</p>
+                    <p>LinkedIn: ShirleyArias</p>
+                </div>
+            </div> 
+            <div class="col">
+            </div> 
+        </section>
+        <section class="row align-items-center">
+
+            <div class="col">
+            </div>
+
+            <div class="col-8 contact-form-container">
+                <h2>Contact Form</h2>
+
+             
+                <form method="post" action="{{ path('contactPage') }}" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input class="form-control" name="name" id="name" type="text">
+
+                        <label for="email">Email</label>
+                        <input class="form-control" name="email" id="email" type="email">
+                    </div>
+
+                    <label for="message">Message</label>
+                    <textarea rows="4" cols="100" name="message" id="message" class="form-control" form="contact-form">Please, write your message here...
+                    </textarea>
+
+                    <div class="text-center btn-container">
+                        <input class="btn btn-primary" type="submit">
+                    </div>
+                </form>
+               
+            </div>
+
+           <div class="col">
+            </div>
+ 
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome to my Blog!{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap">
+    {% endblock %}
+</head>
+<body>
+{% block header %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{ path('homepage') }}">
+            <img src="{{ asset('img/logo.png') }}" height="60" class="d-inline-block align-top" alt="">
+        </a>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="{{ path('homepage') }}">About me</a>
+            <a class="nav-item nav-link" href="{{ path('createSerie') }}">Portfolio</a>
+            <a class="nav-item nav-link" href="{{ path('contactPage') }}">Contact</a>
+        </div>
+    </nav>
+{% endblock %}
+{% block body %}
+
+    <div class="container">
+    
+        <section class="title row align-items-center">
+            
+            <div class="col">
+            </div>
+        
+            <div class="header-img col-2">
+                <img src="{{ asset('img/shirley.jpg') }}" height="180" alt="">
+            </div>
+            <div class="header-text col-8">
+                <h1>Shirley Arias</h1>
+                <h3>Telecommunications Engineer</h3>
+            </div> 
+
+            <div class="col">
+            </div> 
+        </section>
+
+        <section class="row info align-items-center">
+            <article class="col">
+            </article>
+            <article class="col-10">
+                <div class="about">
+                     <p>
+                        Telecommunications engineer with skills in areas
+                        such as communications technology, electronics, computing
+                        and telematics. Some soft skills developed through my work experience
+                        are teamwork, assertive communication, troubleshooting, decision-making,
+                        negotiation, among others. Likewise, I have ease and total
+                        disposition to acquire new knowledge. I am currently focused on
+                        areas such as IT project management, full stack web development and cybersecurity.
+                    </p>
+                </div>
+                <div class="tech-skills">
+                    <h2>Tech Skills</h2>
+                    <ul>
+                        <li>OS Windows / Linux</li>
+                        <li>PHP - Symfony</li>
+                        <li>Relational and Non-Relational DDBB</li>
+                        <li>Javascript - React</li>
+                        <li>Node JS - Express</li>
+                        <li>Docker and Git</li>
+                        <li>Cybersecurity</li>
+                    </ul>
+                </div>
+                <div class="hobbies">
+                    <h2>Hobbies</h2>
+                    <ul>
+                        <li>Photography</li>
+                        <li>Yoga</li>
+                        <li>Meditation</li>
+                        <li>Writing</li>
+                    </ul>
+                </div>
+                <div class="cv text-center">
+                   <h3>Download CV</h3>
+                     <a href="{{ asset('img/AriasShirley-CV21-en.jpg') }}" target="_blank">
+                        <button type="button" class="btn btn-light">Shirley's CV</button>
+                    </a>
+                </div>
+
+            </article>
+             <article class="col">
+            </article>
+        </section>
+
+    </div>
+
+
+    
+    
+    
+
+{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

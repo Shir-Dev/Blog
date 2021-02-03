@@ -1,0 +1,64 @@
+{% extends 'homepage.html.twig' %}
+
+{% block title %}Portfolio - Movies{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+        <section class="title row align-items-center">
+            
+            <div class="col">
+            </div>
+            <div class="col-8 text-center">
+                <div class="add-serie-container">
+                    <h1>Adding a Serie to a Json</h1>
+
+                    {% if title %}
+                        <p>Title: {{ title }}</p>
+                    {% endif %}
+                    {% if category %}
+                        <p>Category: {{ category }}</p>
+                    {% endif %}
+                    {% if description %}
+                        <p>Description: {{ description }}</p>
+                    {% endif %}
+
+                    <div class="form-container">
+                        <form method="post" action="{{ path('createSerie') }}">
+                            <div class="form-group" id="serie-form">
+                                <label for="title">Title</label>
+                                <input name="title" type="text">
+
+                                <label for="description">Description</label>
+                                <input name="description" type="textarea">
+
+                                <label for="category">Category</label>
+                                <select name="category">
+                                    <option name="sci-fi">Sci-Fi</option>
+                                    <option name="drama">Drama</option>
+                                    <option name="fantasy">Fantasy</option>
+                                </select>
+
+                                <div class="text-center btn-container">
+                                    <input class="btn btn-primary" type="submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="git-link">
+                    <h2>
+                        For more projects, please visit my git:
+                        </br>
+                        <a href="https://github.com/Shir-Dev">https://github.com/Shir-Dev</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="col">
+            </div>
+        </section>
+
+    </div>
+
+{% endblock %}
